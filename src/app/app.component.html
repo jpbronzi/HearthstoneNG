@@ -1,3 +1,34 @@
-<h1>
-  {{title}}
-</h1>
+<button md-button class="test">{{title}}  </button>
+<div class="selectHero">
+  <p>Match 1</p>
+  <div *ngIf="player1[0].image != ''">
+  <img src="{{player1[0].image}}">
+  </div>
+  <div>
+    <md-select placeholder="Select Your Hero" class="selectHeroDetails" >
+      <md-option *ngFor="let Hero of heroes" [value]="Hero.class" (click)=setHero1(Hero,0)>
+      {{Hero.class}}
+      </md-option>
+    </md-select>
+  </div>
+  <p class="VsFont">VS</p>
+  <div *ngIf="player2[0].image != ''">
+  <img src="{{player2[0].image}}">
+  </div>
+  <md-select placeholder="Select Your Hero" >
+    <md-option *ngFor="let Hero of heroes" [value]="Hero.class" (click)=setHero2(Hero,0)>
+    {{Hero.class}}
+    </md-option>
+  </md-select>
+  <div>
+    <md-select placeholder="Select The Winner" >
+      <md-option [value]="player1[0].name">
+      Player 1 {{player1[0].name}}
+      </md-option>
+      <md-option [value]="player1[0].name">
+      Player 2 {{player2[0].name}}
+      </md-option>
+    </md-select>
+    <p>Round 1 Winner</p>
+  </div>
+</div>

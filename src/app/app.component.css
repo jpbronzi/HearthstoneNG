@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Belwe';
+    src: url("/assets/fonts/belwe-med.woff")
+}
+.test{
+    font-family: 'Belwe';
+}
+.selectHero{
+    font-family: 'Belwe';
+
+}
+.selectHeroDetails{
+    height:100px;
+}
+.VsFont{
+    font-size: 50px;
+}
