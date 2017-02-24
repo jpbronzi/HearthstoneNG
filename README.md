@@ -1,2 +1,0 @@
-# HearthstoneNG
-Tournament 
